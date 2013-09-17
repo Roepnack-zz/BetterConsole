@@ -1,10 +1,12 @@
+//BETTER CONSOLE BY SCOTT ROEPNACK
 
-//better console functions!
+
+//Get console if the current browser has one
 //set windows.console and console to be accessible through _console
 var _console = (window.console = window.console || {});
 
 //repalce stanard console with the better console
-window.console  = function() {
+window.console = function() {
 
 	//@PUBLIC
 	//Mode functions
@@ -31,9 +33,6 @@ window.console  = function() {
 
 	//@PRIVATE
 
-	//Get console if the current browser has one
-	//console = (window.console = window.console || {});
-	
 	//Save the time of load
 	var loadTime = Date.now();
 
@@ -76,26 +75,3 @@ window.console  = function() {
 		siteInDevelopment: setSiteInDevelopmentPublic
 	};
 }();
-
-function foo(){
-	console.debug('I\'m debugging');
-}
-function bar(){
-	console.log('I\'m logging');
-}
-function baz(){
-	console.warn('I\'m warning');
-}
-function qux(){
-	console.error("I'm er\"roring");
-}
-
-
-$(document).ready(function() {
-	foo();
-	console.siteLive();
-	bar();
-	console.siteInDevelopment();
-	baz();
-	qux();
-});
