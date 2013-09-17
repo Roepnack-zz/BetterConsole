@@ -7,6 +7,7 @@
      ☐ https://developers.google.com/chrome-developer-tools/docs/console
      ☐ console.time and other methods need pass throughs at least
      ☐ console.log('%cBlue! %cRed%c sdadasds!', 'color: blue;', 'color: red;', 'color: black;');
+     ☐ https://developers.google.com/chrome-developer-tools/docs/tips-and-tricks
 
 Bugs:
   ☐ Console is getting an extra line added of "undefined" figure out why and stop it
