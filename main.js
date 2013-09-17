@@ -77,7 +77,10 @@ window.console = function() {
 		}
 	}	
 
-	//Revealing Module - Allow access to public methods only
+	/****************************************************************
+	 ****************** @ Revealing Module @ ************************
+	 ************** Allows access to public methods only ************
+	 ****************************************************************/
 	return {
 		debug:             debugPublic,
 		error:             errorPublic,
