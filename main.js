@@ -4,7 +4,7 @@
 var _console = (window.console = window.console || {});
 
 //repalce stanard console with the better console
-window.  = function() {
+window.console  = function() {
 
 	//@PUBLIC
 	//Mode functions
