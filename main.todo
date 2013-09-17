@@ -1,0 +1,6 @@
+ Errors:
+   ☐ Handle line number
+   ☐ Handle file name
+
+Bugs:
+  ☐ Console is getting an extra line added of "undefined" figure out why and stop it
