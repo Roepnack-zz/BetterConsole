@@ -1,4 +1,11 @@
-//BETTER CONSOLE BY SCOTT ROEPNACK
+/***
+ *     __   ___ ___ ___ ___ __     _   _        __   _      ___ 
+ *     )_)  )_   )   )  )_  )_)   / ` / ) )\ ) (_ ` / ) )   )_  
+ *    /__) (__  (   (  (__ / \   (_. (_/ (  ( .__) (_/ (__ (__  
+ *             
+ *		By Scott Roepnack                                                 
+ */
+
 
 
 //Get console if the current browser has one
