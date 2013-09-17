@@ -15,7 +15,10 @@ var _console = (window.console = window.console || {});
 //repalce stanard console with the better console
 window.console = function() {
 
-	//@PUBLIC
+	/****************************************************************
+	 *********************** @ PUBLIC @ *****************************
+	 ****************************************************************/
+
 	//Mode functions
 	function setSiteLivePublic() {
 		setInDevelopmentMode(false);
@@ -38,7 +41,10 @@ window.console = function() {
 		_write(_console.error, arguments.callee.caller.name, text);
 	}
 
-	//@PRIVATE
+
+	/****************************************************************
+	 *********************** @ PRIVATE @ ****************************
+	 ****************************************************************/
 
 	//Save the time of load
 	var loadTime = Date.now();
@@ -67,18 +73,17 @@ window.console = function() {
 								+ fn.name + ' ' + secondsSincePageLoad(loadTime) + ' seconds after page load"' 
 					+ ')');
 			}		
-
 			eval('_console.' + fn.name + '("' + text.replace('"', '\\"') + '")');	
 		}
 	}	
 
 	//Revealing Module - Allow access to public methods only
 	return {
-		debug: debugPublic,
-		error: errorPublic,
-		log:   logPublic,
-		warn:  warnPublic,
-		siteLive:  setSiteLivePublic,
+		debug:             debugPublic,
+		error:             errorPublic,
+		log:               logPublic,
+		warn:              warnPublic,
+		siteLive:          setSiteLivePublic,
 		siteInDevelopment: setSiteInDevelopmentPublic
 	};
 }();
