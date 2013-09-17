@@ -22,9 +22,11 @@ window.console = function() {
 	//Mode functions
 	function setSiteLivePublic() {
 		setInDevelopmentMode(false);
+		return 'Console in Development Mode.';
 	}
 	function setSiteInDevelopmentPublic() {
 		setInDevelopmentMode(true);
+		return 'Console in Live Site Mode.';
 	}
 
 	//Log functions
