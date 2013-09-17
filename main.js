@@ -31,16 +31,16 @@ window.console = function() {
 
 	//Log functions
 	function debugPublic(text) {
-		_write(_console.debug, arguments.callee.caller.name, text);
+		_write(_console.debug, arguments.callee.caller, text);
 	}
 	function logPublic(text) {
-		_write(_console.log, arguments.callee.caller.name, text);
+		_write(_console.log, arguments.callee.caller, text);
 	}
 	function warnPublic(text) {
-		_write(_console.warn, arguments.callee.caller.name, text);
+		_write(_console.warn, arguments.callee.caller, text);
 	}
 	function errorPublic(text) {
-		_write(_console.error, arguments.callee.caller.name, text);
+		_write(_console.error, arguments.callee.caller, text);
 	}
 
 
@@ -66,9 +66,9 @@ window.console = function() {
 	//write to the console with appropriate information
 	function _write(fn, caller, text) {
 		if( devMode == true && typeof(fn) === 'function'){
-			if( caller !== '') {
+			if( caller !== null) {
 				eval('_console.' + fn.name + '("' 
-								+ caller  + ' fired ' + fn.name + ' ' + secondsSincePageLoad(loadTime) + ' seconds after page load" '
+								+ caller.name  + ' fired ' + fn.name + ' ' + secondsSincePageLoad(loadTime) + ' seconds after page load" '
 					 + ')');
 			} else {
 				eval('_console.' + fn.name + '("' 
