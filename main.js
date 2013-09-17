@@ -65,18 +65,19 @@ window.console = function() {
 
 	//write to the console with appropriate information
 	function _write(fn, caller, text) {
-		if( devMode && typeof(fn) === 'function'){
+		if( devMode == true && typeof(fn) === 'function'){
 			if( caller !== '') {
 				eval('_console.' + fn.name + '("' 
 								+ caller  + ' fired ' + fn.name + ' ' + secondsSincePageLoad(loadTime) + ' seconds after page load" '
 					 + ')');
 			} else {
 				eval('_console.' + fn.name + '("' 
-								+ fn.name + ' ' + secondsSincePageLoad(loadTime) + ' seconds after page load"' 
+								 + 'fired ' + fn.name + ' ' + secondsSincePageLoad(loadTime) + ' seconds after page load"' 
 					+ ')');
-			}		
-			eval('_console.' + fn.name + '("' + text.replace('"', '\\"') + '")');	
+			}			
 		}
+		//write to the console as nomral no matter what mode we are in.
+		eval('_console.' + fn.name + '("' + text.replace('"', '\\"') + '")');	
 	}	
 
 	/****************************************************************
