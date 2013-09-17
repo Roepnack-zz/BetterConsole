@@ -1,6 +1,12 @@
- Errors:
+ tasks:
    ☐ Handle line number
    ☐ Handle file name
+   ☐ make out put have nice colors
+     ☐ true should be blue
+     ☐ false should be red
+     ☐ https://developers.google.com/chrome-developer-tools/docs/console
+     ☐ console.time and other methods need pass throughs at least
+     ☐ console.log('%cBlue! %cRed%c sdadasds!', 'color: blue;', 'color: red;', 'color: black;');
 
 Bugs:
   ☐ Console is getting an extra line added of "undefined" figure out why and stop it
