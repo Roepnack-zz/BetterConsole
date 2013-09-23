@@ -81,6 +81,32 @@ window.console = function() {
 	}	
 
 	/****************************************************************
+	************* Pass Through Methods - To Main Console ************
+	*****************************************************************/
+	function assertPublic(params) { _console.assert(params); }
+	function clearPublic(params) { _console.assert(params); }
+	function constructorPublic(params) { _console.assert(params); }
+	function dirPublic(params) { _console.assert(params); }
+	function dirxmlPublic(params) { _console.assert(params); }
+	function groupPublic(params) { _console.assert(params); }
+	function groupCollapsedPublic(params) { _console.assert(params); }
+	function groupEndPublic(params) { _console.assert(params); }
+	function hasOwnPropertyPublic(params) { _console.assert(params); }
+	function isPrototypeOfPublic(params) { _console.assert(params); }
+	function markTimelinePublic(params) { _console.assert(params); }
+	function memoryPublic(params) { _console.assert(params); }
+	function profilePublic(params) { _console.assert(params); }
+	function profileEndPublic(params) { _console.assert(params); }
+	function propertyIsEnumerablePublic(params) { _console.assert(params); }
+	function tablePublic(params) { _console.assert(params); }
+	function timeEndPublic(params) { _console.assert(params); }
+	function timeStampPublic(params) { _console.assert(params); }
+	function toLocaleStringPublic(params) { _console.assert(params); }
+	function toStringPublic(params) { _console.assert(params); }
+	function tracePublic(params) { _console.assert(params); }
+	function valueOfPublic(params) { _console.assert(params); }
+
+	/****************************************************************
 	 ****************** @ Revealing Module @ ************************
 	 ************** Allows access to public methods only ************
 	 ****************************************************************/
@@ -90,6 +116,30 @@ window.console = function() {
 		log:               logPublic,
 		warn:              warnPublic,
 		siteLive:          setSiteLivePublic,
-		siteInDevelopment: setSiteInDevelopmentPublic
+		siteInDevelopment: setSiteInDevelopmentPublic,
+
+		//pass throughs
+		assert: assertPublic,
+		clear: clearPublic,
+		constructor: constructorPublic,
+		dir: dirPublic,
+		dirxml:  dirxmlPublic,
+		group: groupPublic,
+		groupCollapsed: groupCollapsedPublic,
+		groupEnd: groupEndPublic,
+		hasOwnProperty: hasOwnPropertyPublic,
+		isPrototypeOf: isPrototypeOfPublic,
+		markTimeline: markTimelinePublic,
+		memory: memoryPublic,
+		profile: profilePublic,
+		profileEnd: profileEndPublic,
+		propertyIsEnumerable: propertyIsEnumerablePublic,
+		table: tablePublic,
+		timeEnd: timeEndPublic,
+		timeStamp: timeStampPublic,
+		toLocaleString: toLocaleStringPublic,
+		toString: toStringPublic,
+		trace: tracePublic,
+		valueOf: valueOfPublic
 	};
 }();
