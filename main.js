@@ -65,20 +65,42 @@ window.console = function() {
 
 	//write to the console with appropriate information
 	function _write(fn, caller, text) {
+
+		//write to the console as normal no matter what mode we are in.
+		eval('_console.' + fn.name + '("' + text.replace('"', '\\"') + '")');
+
+		
 		if( devMode == true && typeof(fn) === 'function'){
-			if( caller !== null) {
-				eval('_console.' + fn.name + '("' 
-								+ caller.name  + ' fired ' + fn.name + ' ' + secondsSincePageLoad(loadTime) + ' seconds after page load" '
-					 + ')');
+			var actionableText = _getActionText(caller, fn);
+			if(fn.name != 'log') {
+				_console.log(_getStack(actionableText).join('\n'));
 			} else {
-				eval('_console.' + fn.name + '("' 
-								 + 'fired ' + fn.name + ' ' + secondsSincePageLoad(loadTime) + ' seconds after page load"' 
-					+ ')');
-			}			
+				eval('_console.' + fn.name + '("' + actionableText+ '")');
+			}
 		}
-		//write to the console as nomral no matter what mode we are in.
-		eval('_console.' + fn.name + '("' + text.replace('"', '\\"') + '")');	
+			
 	}	
+
+	//get actionable text "foo fired xyz 33 seconds after page load"
+	function _getActionText( caller, fn ) {
+		if( caller !== null) {
+			return  fn.name + ' fired by ' + caller.name  + ' ' + secondsSincePageLoad(loadTime) + ' seconds after page load';			
+		} else {
+			return  fn.name + ' fired ' + secondsSincePageLoad(loadTime) + ' seconds after page load';
+		}	
+	}
+
+	//get stack trace minus the function calls inside better console
+	function _getStack( actionableText ) {
+		var stack = new Error().stack;
+		var stackLines = stack.toString().split('\n');
+		var lines = new Array();
+		lines[0] = 'Stack Trace for ' + actionableText;
+		for(var i = 1; i < stackLines.length - 3; i++) {
+			lines[i] = stackLines[i+3]
+		}
+		return lines;
+	}
 
 	/****************************************************************
 	************* Pass Through Methods - To Main Console ************
