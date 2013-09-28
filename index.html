@@ -9,22 +9,26 @@
 			<script type="text/javascript">
 
 				function foo() {
-					console.log('a');
+					console.log('This is the contents of a log inside function bar.');	
 				}
 
 				function bar() {
-					
+					baz();
 				}
 
-				function successThing() {
+				function baz() {
+					que();
+				}
 
+				function que() {
+					console.error('This is the contents of a error inside function que.');	
 				}
 
 				function handleError() {
 					consle.error('We really should so all kinds of processing here.')
 				}
-				console.warn('d')
-				abc();
+				window.setTimeout(foo, 1000);				
+				window.setTimeout(bar, 2000);				
 			</script>
 	</head>
 	<body>
