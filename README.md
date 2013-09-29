@@ -11,4 +11,4 @@ Better Console overrides the standard javscript console, so  you can use it as i
 console.log("foo");
 ```
 
-![alt tag](http://url/to/img.png)
+![](http://makeitupasigo.com/docs/BetterConsole/logFoo.png)
