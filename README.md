@@ -1,7 +1,6 @@
 BetterConsole
 =============
 
-#####Description
 Better Console is a small JS library that improves the standard browser console functionality.
 
 How to use it
@@ -11,18 +10,17 @@ Better Console overrides the standard javscript console, so  you can use it as i
 console.log("foo");
 ```
 ![](http://makeitupasigo.com/docs/BetterConsole/logFoo.PNG)
----
+___
 ```javascript
 console.debug("bar");
 ```
 ![](http://makeitupasigo.com/docs/BetterConsole/debugBar.PNG)
-
+___
 ```javascript
 console.error("baz");
 ```
 ![](http://makeitupasigo.com/docs/BetterConsole/error_Baz.PNG)
-
-
+___
 ```javascript
 function alpha() {	beta();	}
 function beta()  {	gamma(); }
