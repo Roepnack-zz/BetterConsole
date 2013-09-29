@@ -20,7 +20,7 @@ console.debug("bar");
 ```javascript
 console.error("baz");
 ```
-![](http://makeitupasigo.com/docs/BetterConsole/errorBaz.PNG)
+![](http://makeitupasigo.com/docs/BetterConsole/warnWithStack.PNG)
 
 
 ```javascript
