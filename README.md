@@ -23,3 +23,18 @@ console.error("baz");
 ![](http://makeitupasigo.com/docs/BetterConsole/errorBaz.PNG)
 
 
+```javascript
+function alpha() {	beta();	}
+function beta()  {	gamma(); }
+function gamma() {	delta(); }
+function delta() {
+  console.warn('This is the contents of a warn message inside function delta.')
+}				
+window.setTimeout(alpha, 4000);	
+```
+![](http://makeitupasigo.com/docs/BetterConsole/warnWithStack.PNG)
+
+
+
+
+
