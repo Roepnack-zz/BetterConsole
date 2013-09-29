@@ -1,5 +1,5 @@
  tasks:
-   ☐ Handle line number
+   ✔ Handle line number @done (13-09-28 20:17)
    ☐ Handle file name
    ☐ make out put have nice colors
      ☐ true should be blue
